@@ -1,0 +1,21 @@
+{
+  "name": "TelegramToDynamo",
+  "version": "0.0.0",
+  "description": "Log telegram messages to Dynamo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://taylorking@github.com/taylorking/TelegramToDynamo.git"
+  },
+  "author": "TaylorKing",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/taylorking/TelegramToDynamo/issues"
+  },
+  "dependencies": {
+    "node-uuid": "~1.4.7"
+  }
+}
