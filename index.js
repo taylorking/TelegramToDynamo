@@ -2,7 +2,6 @@ var uuid = require('node-uuid');
 var aws = require('aws-sdk');
 var dynamo = new aws.DynamoDB();
 exports.handler = function(event, context) {
-	console.log(event);
 	var messId = uuid.v4();
 	var chatId = event.message.chat.id;
 	var text = event.message.text;
@@ -18,7 +17,7 @@ exports.handler = function(event, context) {
 				"N":JSON.stringify(chatId)
 			},
 			"chat_name": {
-				"S":chat
+				"S":((chat === undefined)? "private":chat)
 			},
 			"author":{
 				"S":author
@@ -34,7 +33,6 @@ exports.handler = function(event, context) {
 			}
 		}	
 	};
-	console.log(params);
 	dynamo.putItem(params, function(err, data) {
 		if(err) {
 			context.fail(err);
