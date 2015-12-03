@@ -29,7 +29,7 @@ exports.handler = function(event, context) {
 				"S":text
 			},
 			"time": {
-				"N":Date.now()
+				"N":JSON.stringify(Date.now())
 			}
 		}	
 	}
