@@ -32,7 +32,7 @@ exports.handler = function(event, context) {
 				"N":JSON.stringify(Date.now())
 			}
 		}	
-	}
+	};
 	dynamo.putItem(params, function(err, data) {
 		if(err) {
 			context.fail(err);
