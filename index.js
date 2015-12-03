@@ -14,7 +14,7 @@ exports.handler = function(event, context) {
 				"S":messId
 			}, 
 			"chat_id": {
-				"N":chatId
+				"N":JSON.stringify(chatId)
 			},
 			"chat_name": {
 				"S":chat
