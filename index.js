@@ -2,6 +2,7 @@ var uuid = require('node-uuid');
 var aws = require('aws-sdk');
 var dynamo = new aws.DynamoDB();
 exports.handler = function(event, context) {
+	console.log(event);
 	var messId = uuid.v4();
 	var chatId = event.message.chat.id;
 	var text = event.message.text;
