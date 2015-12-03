@@ -33,6 +33,7 @@ exports.handler = function(event, context) {
 			}
 		}	
 	};
+	console.log(params);
 	dynamo.putItem(params, function(err, data) {
 		if(err) {
 			context.fail(err);
